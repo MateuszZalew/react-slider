@@ -1,7 +1,9 @@
+import Slider from "./Slider";
+
 const App = () => {
   return (
     <main>
-      <h2>Slider Starter</h2>
+      <Slider />
     </main>
   );
 };
