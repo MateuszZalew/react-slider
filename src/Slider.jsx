@@ -21,6 +21,15 @@ const Slider = () => {
     });
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentPerson]);
+
   return (
     <section className="slider-container">
       {people.map((person, index) => {
